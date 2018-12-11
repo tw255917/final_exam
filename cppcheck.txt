@@ -1,0 +1,9 @@
+Script started on Tue Dec 11 11:56:27 2018
+[?1034hbash-3.2$ cppcheck --enable=all main.cc
+Checking main.cc ...
+[main.cc:79]: (style) The function 'errf' is never used.
+[main.cc:102]: (style) The function 'report' is never used.
+(information) Cppcheck cannot find all the include files (use --check-config for details)
+bash-3.2$ exit
+
+Script done on Tue Dec 11 11:56:41 2018
