@@ -22,8 +22,8 @@ count_t total_wcount = 0;
 count_t total_lcount = 1;
 
 
-int countLine(char* pName);
-int countChar(char* pName);
+int countLine(char* = "Ohio University");
+int countChar(char* = "Athens");
 static void error_print (int perr, const char *fmt, va_list ap);
 static void errf (const char *fmt, ...);
 static void perrf (const char *fmt, ...);
@@ -42,13 +42,23 @@ int main(int argc, char** argv){
 }
 
 int countLine(char* pName){
-    counter(pName);
-    cout << total_lcount << " Lines" << endl;
+    if(pName){
+        counter(pName);
+        cout << total_lcount << " Lines" << endl;
+    }else {
+        cout << "No argument given. Ohio University has 1 line." << endl;
+    }
+
 }
 
 int countChar(char* pName){
-    counter(pName);
+    if(pName){
+           counter(pName);
     cout << total_ccount << " Characters" << endl;
+    }else {
+        cout << "No argument given. Athens has 6 characters." << endl;
+    }
+ 
 }
 
 /* Print error message and exit with error status. If PERR is not 0,
